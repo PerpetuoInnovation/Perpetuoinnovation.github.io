@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PERPETUO INNOVATION</title>
+		<meta name="description" content="An open collection of menu styles that use the line as a creative design element" />
+		<meta name="keywords" content="web design, styles, inspiration, line, pseudo-element, SVG, animation" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+	</head>
+	<body>
+		<video autoplay loop id="video-background" muted>
+  <source src="video/video.mp4" type="video/mp4">
+</video>
+		<div class="container">
+			<section class="section section--menu" id="Iris">
+				<h2 class="section__title">PERPETUO INNOVATION</h2>
+				<nav class="menu menu--iris">
+					<ul class="menu__list">
+						<li class="menu__item menu__item--current"><a href="#" class="menu__link">HOME</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">&#47Design</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">&#47Research</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">&#47Neuron<sup>BETA</sup></a></li>
+						<li class="menu__item"><a href="#" class="menu__link">&#47 Daniel</a></li>
+					</ul>
+				</nav>
+			</section>
+			
+		</div>
+		<!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+		</script>
+	</body>
+</html>
