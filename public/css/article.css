@@ -76,8 +76,8 @@ li ul {
     margin:0;
 }
 
-.About-hero {
-    background-image: url(../images/About.jpg);
+.about-hero {
+    background-image: url(../images/about.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;

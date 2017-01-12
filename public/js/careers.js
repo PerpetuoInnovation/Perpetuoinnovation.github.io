@@ -1,7 +1,7 @@
 $(function(){
     var bgimage = new Image();      
-    bgimage.src="../public/images/About.jpg";       
+    bgimage.src="../public/images/about.jpg";       
     $(bgimage).load(function(){
-  		$('.About-hero').addClass('visible');                  
+  		$('.about-hero').addClass('visible');                  
     });
 });
