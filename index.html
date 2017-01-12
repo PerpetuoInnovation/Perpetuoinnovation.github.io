@@ -1,72 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>PERPETUO INNOVATION</title>
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-	</head>
-	<body>
-		<video autoplay loop id="video-background" muted>
-  <source src="video/video.mp4" type="video/mp4">
-</video>
-		<div class="container">
-			<section class="section section--menu" id="Iris">
-				<h2 class="section__title">PERPETUO INNOVATION</h2>
-				<nav class="menu menu--iris">
-					<ul class="menu__list">
-						<li class="menu__item menu__item--current"><a href="#" class="menu__link">HOME</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">&#47Design</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">&#47Research</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">&#47Neuron<sup>BETA</sup></a></li>
-						<li class="menu__item"><a href="#" class="menu__link">&#47 Daniel</a></li>
-					</ul>
-				</nav>
-			</section>
-			
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<title>Perpetuo Innovation</title>
+	<meta property="og:title" content="Perpetuo Innovationn"/>
+	<meta name="author" content="Perpetuo Innovation" />
+	<link rel="stylesheet" type="text/css" href="public/home/global.css">
+	<link rel="stylesheet" type="text/css" href="public/home/homepage.css">
+	<link rel="stylesheet" type="text/css" href="public/home/flex-layout-attribute.css">
+	<link rel="icon" href="favicon.ico"> 
+	<script type='text/javascript' src='public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='public/js/global1.js'></script>
+	<script type='text/javascript' src='public/js/homepage.js'></script>
+	<script type='text/javascript' src="public/js/jquery.mixitup.min.js"></script>
+	<script src="public/js/main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+</div>
+<div id="nav" layout="row top-left">
+	<div self="left">
+		<a href="index.html"><div class="logo logo-isNotVisIfMobile">innovation</div></a>
+		<a href="index.html"><div class="logo logo-isVisIfMobile"></div></a>
+	</div>
+	<div class="nav-isNotVisIfMobile">
+		<div class="item">
+		<a href="Design/index.html">Design</a>
 		</div>
-		<!-- /container -->
-		<script src="js/classie.js"></script>
-		<script src="js/clipboard.min.js"></script>
-		<script>
-		(function() {
-			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
-				var menuItems = menu.querySelectorAll('.menu__link'),
-					setCurrent = function(ev) {
-						ev.preventDefault();
+		<div class="item">
+		<a href="research/index.html">Research</a>
+		</div>
+		<div class="item">
+		<a href="About/index.html">About</a>
+		</div>
+	</div>
+	<div class="nav-isVisIfMobile">
+		<div class="item">
+		<a href="Design/index.html">Design</a>
+		</div>
+		<div class="item">
+		<a href="research/index.html">Research</a>
+		</div>
+		<div class="item">
+		<a href="About/index.html">About</a>
+		</div>
+	</div>
+</div>
+<div id="section">
+	<div class="headline">
+		<h3>perpetuo <span>innovation</span>  </h3>
+	</div>
 
-						var item = ev.target.parentNode; // li
-
-						// return if already current
-						if (classie.has(item, 'menu__item--current')) {
-							return false;
-						}
-						// remove current
-						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-						// set current
-						classie.add(item, 'menu__item--current');
-					};
-
-				[].slice.call(menuItems).forEach(function(el) {
-					el.addEventListener('click', setCurrent);
-				});
-			});
-
-			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
-				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-				new Clipboard(link);
-				link.addEventListener('click', function() {
-					classie.add(link, 'link-copy--animate');
-					setTimeout(function() {
-						classie.remove(link, 'link-copy--animate');
-					}, 300);
-				});
-			});
-		})(window);
-		</script>
-	</body>
+</div>
+</body>
 </html>
