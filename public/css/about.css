@@ -295,10 +295,10 @@ a.about-card {
     border-radius: 0px;
     position: relative;
     margin-right: 10px;
-    width: calc(9vw + 12vh - 2px);
-    min-width: 340px;
-    height: calc(9vw + 12vh - 2px);
-    min-height: 500px;
+    width: calc(50vw);
+    height: calc(74vw);
+    max-height:488px;
+    max-width:355px;
     color: #fff;
     
     -webkit-transition: opacity 0.4s ease-out;
@@ -356,7 +356,10 @@ a.about-card:hover {
 .card-description {
     position: absolute;
     left: 50px;
-    bottom: 44px;
+    bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 70%;
     z-index: 3;
 }
 
@@ -368,7 +371,6 @@ h3.place-name {
 
 p.place-tagline {
     font-size: 110%;
-    opacity: 0.8;
 }
 
 
@@ -706,7 +708,6 @@ a.last {
     
     p.place-tagline {
         font-size: 74%;
-        opacity: 0.8;
     }
     
     hr.mrproper {
