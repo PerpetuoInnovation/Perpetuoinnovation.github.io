@@ -175,6 +175,7 @@ hr {
 		background-color: rgba(252,252,252,.98);
 	    -webkit-backdrop-filter: blur(20px);
 	    box-shadow: 0px 2px 40px 0px rgba(0,0,0,0.08);
+	    overflow-x: scroll;
 	}
 	li.sidebar-link{
 		display: inline-block;
