@@ -730,7 +730,7 @@ __________________________________________________*/
 @media only screen and (min-width: 0px) and (max-width: 1024px) {
 	.interviews__item {
 		width: 100%;
-		max-width: 500px;
+		max-width: 1000px;
 		margin: 0 auto 50px;
 		display: block;
 		float: none
@@ -1209,7 +1209,7 @@ keyframes inf-bounce {
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
 	.container--header {
 		padding:0;
 		width: 300px;
