@@ -11491,8 +11491,8 @@ nav.animate = function(direction) {
 			width = $menu.width(),
 			height = $menu.height();
 		if (direction == 'open') {
-			var x = i === 1 || i === 2 ?  -Math.pow(-1, (i)) * width / 6 : -Math.pow(-1, (i + 1)) * width / 2,
-				y = height / 2.5;
+			var x = i === 1 || i === 2 ?  -Math.pow(-1, (i)) * width / 9 : -Math.pow(-1, (i + 1)) * width / 3,
+				y = height/3;
 			x = Math.round(x);
 			y = Math.round(y);
 			$this.removeClass('is-black');
