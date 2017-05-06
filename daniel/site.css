@@ -1,0 +1,160 @@
+body {
+  font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande";
+  -webkit-font-smoothing: antialiased;
+  transition: background .15s ease-in;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -10deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 8deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.wobble {
+  animation-name: wobble;
+}
+
+.work-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.tracked-tight {
+  letter-spacing: -.01em;
+}
+
+.transition-all {
+  transition:all .15s ease-in;
+}
+
+.line-bg {
+  position: relative;
+  display: inline-block;
+}
+
+.line-bg:before {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  height: 14px;
+  margin-top: -5px;
+  content: '';
+  z-index: -1;
+  transition:background .15s ease-in;
+}
+
+@media screen and (min-width:60em) {
+  .line-bg:before {
+    background: #FFCA22;
+  }
+}
+
+.canada {
+  opacity: 0;
+  left: 0;
+}
+
+h1:hover .canada {
+  opacity: 1;
+  left: 15px;
+}
+
+.dark-grey {
+  color: #1B1C1F;
+}
+
+.bg-dark-grey {
+  background: #1B1C1F;
+}
+
+.light-grey {
+  color: #828997;
+}
+
+.blue {
+  color: #2267FF;
+}
+
+.bg-blue {
+  background: #2267FF;
+}
+
+.yellow {
+  color: #FFCA22;
+}
+
+.bg-yellow {
+  background: #FFCA22;
+}
+
+.switch {
+  width: 30px;
+  height: 16px;
+}
+
+.switch-button {
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: calc(100% - 11px);
+  margin-top: -3px;
+}
+
+.switch.active .switch-button {
+  left: 5px;
+}
+
+.shadow-custom {
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.10);
+}
+
+body.bg-dark-grey .dark-grey {
+  color: #FFF;
+}
+
+body.bg-dark-grey .bg-dark-grey {
+  background: #FFF;
+}
+
+body.bg-dark-grey .bg-white {
+  background: #1B1C1F;
+}
+
+@media screen and (min-width:60em) {
+  body.bg-dark-grey .line-bg:before {
+    background: #2267FF;
+  }
+}
+
+body.bg-dark-grey .blue {
+  color: #FFCA22;
+}

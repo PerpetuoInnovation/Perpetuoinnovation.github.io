@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="h-100 w-100" lang="en">
+  <title>Daniel Kim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <link rel="stylesheet" href="site.css">
+  <body class="h-100 w-100">
+    <div class="absolute right-2 top-2 z-1">
+      <img class="dn dib mr2 moon-icon" src="images/Moon_Icon%402x.png" alt="" width="14px" height="14px" />
+      <img class="dn mr2 sun-icon" src="images/Sun_Icon%402x.png" alt="" width="16px" height="16px" />
+      <span class="switch transition-all pointer relative dib bg-dark-grey br-pill">
+        <span class="switch-button transition-all br-pill bg-white absolute"></span>
+      </span>
+    </div>
+    <div class="dt-l h-100 w-100">
+      <div class="dtc-l v-mid-l h-100 w-100">
+        <div class="mw9 center ph3-ns">
+          <div class="cf ph2-ns">
+            <div class="fl w-100 w-75-l pa2-l ph4 pt4 pb3">
+              <div class="pv4-l pt4 pb0 relative">
+                <span class="absolute-l mt2 animated"><img src="images/Wave%402x.png" alt="Hi!" width="40px" height="40px" /></span>
+                <h1 class="dark-grey work-sans b f1-ns fl2 tracked-tight pl5-l mt2 mt0-l mb4 lh-title transition-all"><span class="line-bg no-wrap-l">I am an aspiring leader</span> <span class="line-bg">Daniel Kim from Seoul</span><span class="relative transition-all canada dib-l dn"><img src="images/Koreanflag.png" alt="Hi!" width="32px" height="25px" /></span></h1>
+                <p class="light-grey f4-ns f5 w-100 w-70-l pl5-l lh-copy">CEO of <a class="blue link dim no-underline no-wrap-l" href="http://perpetuoinnovation.com/" target="_blank">perpetuo.innovation</a> in Seoul and co-founder of <a class="blue link dim no-underline" href="http://perpetuoinnovation.com/osaka/" target="_blank">perpetuo.osaka</a>.</p>
+                <p class="light-grey f4-ns f5 w-100 w-70-l pl5-l lh-copy">Instagram: <a class="blue link dim no-underline no-wrap-l" href="http://instagram.com/journeyer" target="_blank">@Journeyer</a><br>Email: <a class="blue link dim no-underline no-wrap-l" href="mailto:perpetuoinnovation@gmail.com" target="_blank">perpetuoinnovation@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        var thehours = new Date().getHours();
+
+      	if (thehours >= 6 && thehours < 18) {
+          $(".switch").removeClass("active");
+          $("body").removeClass("bg-dark-grey");
+          $(".moon-icon").addClass("dib");
+          $(".sun-icon").removeClass("dib");
+      	} else {
+      		$(".switch").addClass("active");
+          $("body").addClass("bg-dark-grey");
+          $(".moon-icon").removeClass("dib");
+          $(".sun-icon").addClass("dib");
+      	}
+
+        $(".switch").click(function() {
+          $(this).toggleClass("active");
+          $("body").toggleClass("bg-dark-grey");
+          $(".moon-icon").toggleClass("dib");
+          $(".sun-icon").toggleClass("dib");
+        });
+
+        function waveAnim(){
+          $(".animated").addClass("wobble");
+        }
+        setTimeout(waveAnim, 2000);
+
+      });
+    </script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17176844-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>
